@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fire Weather Index Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Fire Weather Index Prediction</h1>
+            <p>Enter the weather parameters below to predict the Fire Weather Index.</p>
+        </header>
+
+        <form action="{{ url_for('predict_datapoint') }}" method="post" class="prediction-form">
+            <label for="Temperature">Temperature (°C):</label>
+            <input type="text" id="Temperature" name="Temperature" placeholder="e.g., 25.4" required>
+
+            <label for="RH">Relative Humidity (%):</label>
+            <input type="text" id="RH" name="RH" placeholder="e.g., 40" required>
+
+            <label for="Ws">Wind Speed (km/h):</label>
+            <input type="text" id="Ws" name="Ws" placeholder="e.g., 15" required>
+
+            <label for="Rain">Rain (mm):</label>
+            <input type="text" id="Rain" name="Rain" placeholder="e.g., 0.0" required>
+
+            <label for="FFMC">Fine Fuel Moisture Code:</label>
+            <input type="text" id="FFMC" name="FFMC" placeholder="e.g., 85.5" required>
+
+            <label for="DMC">Duff Moisture Code:</label>
+            <input type="text" id="DMC" name="DMC" placeholder="e.g., 6.7" required>
+
+            <label for="ISI">Initial Spread Index:</label>
+            <input type="text" id="ISI" name="ISI" placeholder="e.g., 3.4" required>
+
+            <label for="Classes">Fire Danger Class:</label>
+            <input type="text" id="Classes" name="Classes" placeholder="e.g., 4" required>
+
+            <label for="Region">Region:</label>
+            <input type="text" id="Region" name="Region" placeholder="e.g., 1 (Region Code)" required>
+
+            <button type="submit" class="submit-button">Predict</button>
+        </form>
+
+        {% if result %}
+            <h2>Prediction Result: The Fire Weather Index is {{ result }}</h2>
+        {% endif %}
+    </div>
+</body>
+</html>

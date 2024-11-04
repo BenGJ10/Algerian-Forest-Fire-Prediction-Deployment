@@ -1,0 +1,131 @@
+/* Global Styles */
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif; /* Modern font family */
+    background: linear-gradient(to bottom right, #e6f7ff, #ffffff); /* Soft gradient background */
+    color: #333; /* Standard text color */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6; /* Improved readability */
+}
+
+/* Main Container */
+.container {
+    max-width: 600px; /* Max width for container */
+    margin: 5rem auto; /* Center container with top margin */
+    padding: 2rem; /* Inner padding */
+    background-color: #ffffff; /* White background for content */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Depth effect */
+    border-radius: 12px; /* Rounded corners */
+}
+
+/* Header Styles */
+header {
+    text-align: center; /* Centered header text */
+    padding: 1rem 0; /* Vertical padding */
+}
+
+header h1 {
+    color: #2e8b57; /* Main color for headers */
+    font-size: 2.5rem; /* Large font for the title */
+    margin-bottom: 0.5rem; /* Space below title */
+}
+
+header p {
+    color: #555; /* Light gray for subtitle */
+    font-size: 1.1rem; /* Slightly larger subtitle */
+}
+
+/* Button Container */
+.button-container {
+    text-align: center; /* Center the content */
+    margin-top: 1.5rem; /* Add some space above the buttons */
+}
+
+/* Button Styles */
+.cta-button, .submit-button {
+    display: inline-block; /* Keep buttons inline */
+    background-color: #2e8b57;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 0.5rem; /* Space between buttons */
+    text-align: center;
+}
+
+.cta-button:hover, .submit-button:hover {
+    background-color: #25694c;
+}
+
+
+/* Form Styles */
+.prediction-form {
+    margin-top: 2rem; /* Space above the form */
+}
+
+.prediction-form label {
+    display: block; /* Labels take full width */
+    margin-top: 1rem; /* Space above labels */
+    font-weight: bold; /* Bold labels */
+    color: #333; /* Standard text color */
+}
+
+.prediction-form input[type="text"] {
+    width: 100%; /* Full-width inputs */
+    padding: 12px; /* Padding for input fields */
+    margin-top: 0.3rem; /* Space below input fields */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 1rem; /* Standard input font size */
+    transition: border-color 0.3s ease; /* Smooth border transition */
+}
+
+.prediction-form input[type="text"]:focus {
+    border-color: #2e8b57; /* Highlight border on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Prediction Result Styles */
+h2 {
+    margin-top: 1.5rem; /* Space above results */
+    font-size: 1.8rem; /* Font size for results */
+    color: #333; /* Dark text for results */
+    text-align: center; /* Center result text */
+}
+
+/* Additional Section Styles */
+section {
+    margin-top: 2rem; /* Space above sections */
+}
+
+.section-title {
+    font-size: 1.5rem; /* Section title font size */
+    color: #2e8b57; /* Section title color */
+    text-align: center; /* Center section title */
+    margin-bottom: 1rem; /* Space below title */
+}
+
+/* Footer Section Styles */
+footer {
+    margin-top: 3rem; /* Space above footer */
+    padding: 1rem 0; /* Footer padding */
+    background-color: #f8f8f8; /* Light footer background */
+    border-top: 1px solid #e0e0e0; /* Subtle top border */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem; /* Reduce padding on smaller screens */
+    }
+
+    header h1 {
+        font-size: 2rem; /* Adjust header size for smaller screens */
+    }
+
+    .cta-button, .submit-button {
+        font-size: 1rem; /* Adjust button size for smaller screens */
+    }
+}
